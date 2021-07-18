@@ -4,7 +4,9 @@
     box-sizing: border-box;
   }
   
-  body {
+
+
+body {
     font-family: sans-serif;
     overflow: hidden;
     /*background: url("./aa.jpg");*/
@@ -17,31 +19,41 @@
     width:100%;
     background-blend-mode: screen;
 
-  }
+}
   
-  .scene,
-  canvas {
+.scene {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 50%;
+    background-color: #e9e61b;
+    justify-content: center;
    
-  }
-  
+}
+
+.svt {
+ 
+  width: 100%;
+  height: 100%;
+}
+
+
 header{
+  
     display: flex;
-    height: 8%;
     justify-content: center;
     align-items: center;
     background-color: #121d02;
+    width: 100%;
 }
 
 header h1{
     margin-top: 3%;
     font-size: 200%;
-    color: #fff;
+    color: rgb(255, 254, 254);
     text-align: center;
     padding-bottom: 15px;
-    font-family:cursive;
+    font-family: cursive;
+    justify-content: center;
 }
 
 h2{
@@ -50,13 +62,13 @@ h2{
   color: rgb(26, 3, 3);
   text-align: center;
   padding-bottom: 15px;
-  font-family:cursive;
+  font-family: cursive;
 }
 
 .profimage{
   margin: auto;
   width: fit-content;
-  padding: 10px;
+  justify-content: center;
  
 }
 
@@ -110,14 +122,13 @@ h2{
   margin-top: 1000vh;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
   max-width: 80%;
-  max-height: 30%;
+  max-height: 20%;
   margin: auto;
   text-align: center;
   font-family: arial;
   background-color: transparent;
   padding: 5%;
   border-radius: 20%;
-  
 }
 
 h4{
@@ -138,6 +149,7 @@ h2{
   float: left;
   width: 25%;
   padding: 0 10px;
+  
 }
 
 /* Remove extra left and right margins, due to padding */
@@ -147,7 +159,7 @@ margin-top: 50%;
 }
 
 .card:hover {
-  background-color:rgb(253, 249, 251);
+  background-color:rgb(238, 46, 142);
   font-size:15px;
   
 }
@@ -160,13 +172,68 @@ margin-top: 50%;
 }
 
 /* Responsive columns */
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .column {
     width: 100%;
     display: block;
     margin-bottom: 20px;
+
   }
+
+  body{
+    background-blend-mode: screen;
+    background-size:100%;
+    background-repeat: repeat-y;
+    height:100%;
+    width:100%;
+  }
+
+  header{
+    width: cover;
+  }
+
+  .footer-basic {
+    width: 100%;
+  }
+
+  .footer-basic .copyright {
+    margin-top:10px;
+    text-align:center;
+  }
+  
+  .profimage{
+    justify-content: center; 
+  }
+
+  .animation .flying{
+    margin-top: 30%;
+    height: 20%;
+  }
+
+  canvas {
+    display: flex;
+    margin-top: -50px;
+    padding: -500px -500px 500px;
+    margin-left: 150px;
+    justify-content: center;
 }
+
+  html, body{
+    background-size: cover;
+  }
+
+  .row {
+    margin: 0 -5px;
+    margin-top: 800px;
+    }
+
+  .scene{
+      margin-top: 25%;
+      justify-content: center;
+    }
+
+}
+
 
 
 .row1 {
@@ -186,7 +253,7 @@ margin-top: 50%;
   /*Quote*/
   
   
-  .box {
+.box {
     margin-top: 500px;
     background-color: transparent;
     border-radius: 3px;
@@ -202,7 +269,8 @@ margin-top: 50%;
     transition: 0.4s;
     text-align: center;
   }
-  .box:before {
+
+.box:before {
     content: "";
     position: absolute;
     top: 0;
@@ -214,7 +282,8 @@ margin-top: 50%;
     border-left: 20px solid rgb(252, 252, 252);
     box-sizing: border-box;
   }
-  .box:after {
+
+.box:after {
     content: "";
     position: absolute;
     top: 0;
@@ -224,22 +293,24 @@ margin-top: 50%;
     border-bottom: 20px solid rgb(247, 250, 97);
     border-right: 20px solid rgb(138, 245, 134);
     box-sizing: border-box;
-  }
-  .box .fas {
+}
+
+.box .fas {
     font-size: 25px;
     height: 50px;
     width: 50px;
     line-height: 50px !important;
     background-color: #fff;
     color: #1b86e9;
-  }
-  .box .fa2 {
+}
+.box .fa2 {
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 1;
-  }
-  .box .text {
+}
+
+.box .text {
     position: absolute;
     top: 30px;
     left: -30px;
@@ -249,13 +320,14 @@ margin-top: 50%;
     border-radius: 3px;
     transition: 0.4s;
     font-family:cursive;
-  }
-  .box .text .fa1 {
+}
+.box .text .fa1 {
     position: absolute;
     top: 0;
     left: 0;
-  }
-  .box .text div {
+}
+
+.box .text div {
     position: absolute;
     top: 50%;
     left: 0;
@@ -265,30 +337,30 @@ margin-top: 50%;
     padding: 30px 60px;
     line-height: 1.5;
     box-sizing: border-box;
-  }
-  .box .text div h3 {
+}
+.box .text div h3 {
     font-size: 30px;
     margin-bottom: 5px;
-  }
-  .box .text div p {
+}
+.box .text div p {
     font-size: 15px;
-  }
-  .box:hover {
+}
+.box:hover {
     transform: translate(-50%, -50%) rotateY(-20deg) skewY(3deg);
-  }
-  .box:hover .text {
+}
+.box:hover .text {
     transform: rotateY(20deg) skewY(-3deg);
-  }
+}
   
 
   /* Footer */
-  .footer-basic {
+.footer-basic {
     padding:30px 0;
     color:#f8faf5;
     height:15%;
   }
   
-  .footer-basic ul {
+.footer-basic ul {
     padding:0;
     list-style:none;
     text-align:center;
@@ -297,26 +369,26 @@ margin-top: 50%;
     margin-bottom:0;
   }
   
-  .footer-basic li {
+.footer-basic li {
     padding:0 10px;
   }
   
-  .footer-basic ul a {
+.footer-basic ul a {
     color:inherit;
     text-decoration:none;
     opacity:0.8;
   }
   
-  .footer-basic ul a:hover {
+.footer-basic ul a:hover {
     opacity:10%;
   }
   
-  .footer-basic .social {
+.footer-basic .social {
     text-align:center;
     padding-bottom:10px;
   }
   
-  .footer-basic .social > a {
+.footer-basic .social > a {
     font-size:30px;
     width:40px;
     height:40px;
@@ -330,11 +402,11 @@ margin-top: 50%;
     opacity:0.75;
   }
   
-  .footer-basic .social > a:hover {
+.footer-basic .social > a:hover {
     opacity:1.5;
   }
   
-  .footer-basic .copyright {
+.footer-basic .copyright {
     margin-top:10px;
     text-align:center;
     font-size:13px;
@@ -342,3 +414,17 @@ margin-top: 50%;
     margin-bottom:0;
   }
   
+
+/*Responsive*/
+/* Media Queries: Tablet Landscape */
+@media screen and (min-width: 100px) {
+  #primary { width:67%; }
+  #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (min-width: 300px) {
+  #primary { width:100%; }
+  #secondary { width:100%; margin:0; border:none; }
+}
+
