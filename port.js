@@ -17,8 +17,23 @@ function init() {
 
   //Camera setup
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-  camera.position.set(5,2,2);//(,updown,front back)2,2,10 1 -0.5 10
+  camera.position.set(-2,2,6);//(,updown,front back)2,2,10 1 -0.5 10
   camera.lookAt(0, 1, 1);
+
+  //Media query
+  function myFunction(x) {
+    if (x.matches) { // If media query matches
+      //camera.position.set(5,4,6);
+      camera.position.set(-2.5,2,5.5);
+    } 
+  }
+  
+
+  var x = window.matchMedia("(max-width: 700px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction) 
+
+  //
 
   const ambient = new THREE.AmbientLight(0x404040, 2);
   scene.add(ambient);
@@ -35,17 +50,37 @@ function init() {
   container.appendChild(renderer.domElement);
 
   //Load Model
+  
   let loader = new THREE.GLTFLoader();
   loader.load("./house/StudyTablefinal4.gltf", function(gltf) {
     scene.add(gltf.scene);
     house = gltf.scene.children[0];
     animate();
   });
+  
+
+
+  function animate() {
+    requestAnimationFrame(animate);
+  
+    if (house) {
+    scene.rotation.y += 0.010;
+  }
+    //house.rotation.z += 0.010;
+    renderer.render(scene, camera);
+
+
+  }
+  
 }
 
 function animate() {
   requestAnimationFrame(animate);
-  house.rotation.z += 0.010;
+
+  if (house) {
+    house.rotation.y += 0.0100;
+}
+  //house.rotation.z += 0.010;
   renderer.render(scene, camera);
 }
 
