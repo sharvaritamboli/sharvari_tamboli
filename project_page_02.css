@@ -1,0 +1,135 @@
+body {
+    font-family: Arial;
+    padding: 0;
+    background: #3c3d3d;
+  }
+  
+  /* Header/Blog Title */
+.header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+  }
+  
+ h2{
+     font-family: cursive;
+ }
+  
+
+  /* Fake image */
+.fakeimg {
+    background-color: rgb(120, 210, 252);
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+.footer-basic{
+    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+    background-blend-mode: multiply;
+    position: relative;
+    overflow: hidden;
+  }
+/* Footer */
+.footer-basic {
+    padding:30px 0;
+    color:#f8faf5;
+    height:5%;
+  }
+  
+.footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+.footer-basic li {
+    padding:0 10px;
+  }
+  
+.footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+.footer-basic ul a:hover {
+    opacity:10%;
+  }
+  
+.footer-basic .social {
+    text-align:center;
+    padding-bottom:10px;
+  }
+  
+.footer-basic .social > a {
+    font-size:30px;
+    width:40px;
+    height:40px;
+    line-height:30px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid rgb(226, 17, 191);
+    margin:0 5px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+.footer-basic .social > a:hover {
+    opacity:1.5;
+  }
+  
+.footer-basic .copyright {
+    margin-top:5px;
+    text-align:center;
+    font-size:13px;
+    color:rgb(18, 87, 235);
+    margin-bottom:0;
+  }
+
+
+  /*slider*/
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+    
+    
+div#slider { overflow: hidden; }
+div#slider figure img { width: 15%; float: left; }
+div#slider figure { 
+      position: relative;
+      width: 300%;
+      margin: 0;
+      left: 0;
+      text-align: left;
+      font-size: 0;
+      animation: 30s slidy infinite; 
+    }
+    

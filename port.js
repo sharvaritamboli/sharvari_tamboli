@@ -17,13 +17,15 @@ function init() {
 
   //Camera setup
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-  camera.position.set(-0.1222, 2.5, 15);
+  camera.position.set(5,2,2);//(,updown,front back)2,2,10 1 -0.5 10
+  camera.lookAt(0, 1, 1);
 
   const ambient = new THREE.AmbientLight(0x404040, 2);
   scene.add(ambient);
 
   const light = new THREE.DirectionalLight(0xffffff, 2);
-  light.position.set(50, 50, 100);
+  light.position.set(8, 10, 5);
+  
   scene.add(light);
   //Renderer
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -34,7 +36,7 @@ function init() {
 
   //Load Model
   let loader = new THREE.GLTFLoader();
-  loader.load("./house/scene.gltf", function(gltf) {
+  loader.load("./house/StudyTablefinal4.gltf", function(gltf) {
     scene.add(gltf.scene);
     house = gltf.scene.children[0];
     animate();
@@ -43,7 +45,7 @@ function init() {
 
 function animate() {
   requestAnimationFrame(animate);
-  house.rotation.z += 0.005;
+  house.rotation.z += 0.010;
   renderer.render(scene, camera);
 }
 

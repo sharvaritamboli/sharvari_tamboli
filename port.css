@@ -23,11 +23,12 @@ body {
   
 .scene {
     position: absolute;
-    width: 50%;
-    height: 40%;
+    width: 90%;
+    height: 100%;
     justify-content: center;
-    margin-left: 250px;
+    size: 50%;
 }
+
 
 
 .svt {
@@ -100,7 +101,7 @@ h2{
 
 .flying{
     position: absolute;
-    height: 90px;
+    height: 100px;
     top: 50%;
     left: 0%;
 }
@@ -153,7 +154,7 @@ h2{
 /* Remove extra left and right margins, due to padding */
 .row {
 margin: 0 -5px;
-margin-top: 50%;
+margin-top: 60%;
 }
 
 .card:hover {
@@ -176,6 +177,11 @@ margin-top: 50%;
     display: block;
     margin-bottom: 20px;
 
+  }
+
+  .cont{
+    padding-top: 0px;
+    margin-top: -50px;
   }
 
   body{
@@ -208,12 +214,13 @@ margin-top: 50%;
   .animation .flying{
     margin-top: 30%;
     height: 20%;
+    margin-bottom: 5%;
   }
 
   .canvas {
     display: flex;
-    margin-top: -50px;
-    padding: -500px -500px 500px;
+    margin-top: -20px;
+    padding: -100px -100px 100px;
     margin-left: 150px;
     justify-content: center;
   }
@@ -224,20 +231,23 @@ margin-top: 50%;
 
   .row {
     margin: 0 -5px;
-    margin-top: 500px;
+    margin-top: 650px;
   }
 
   .scene {
     position: absolute;
-    width: 50%;
-    height: 40%;
+    width: 60%;
+    height: 60%;
     justify-content: center;
-    margin-left: 80px;
-}
+    padding-bottom: 10%;
+  }
 
-.svt{
-  padding-bottom: 10%;
-}
+  .svt{
+  height: 1000px;
+  width: 1000px;
+  padding-left: 10%;
+  padding-top: 5%;
+  }
 
 }
 
